@@ -1,0 +1,28 @@
+.details {
+  color: black;
+}
+
+.box {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.box img {
+  width: 20rem;
+  border-radius: 5px;
+}
+.box h1 {
+  margin-top: 1rem;
+}
+.box h3 {
+  color: blue;
+  margin-top: 1rem;
+}
+
+.box button {
+  margin: 1rem 0;
+}
