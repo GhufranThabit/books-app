@@ -25,7 +25,7 @@ const BooksList = () => {
       ) : (
         <div>
           {error ? (
-            <Error />
+            <Error text="Books can not be loaded" />
           ) : (
             <div className="books-container">
               {books.map((book) => (

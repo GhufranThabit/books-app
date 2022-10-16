@@ -1,21 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./books.css";
 import SavedIcon from "../Saved-Books/SavedIcon";
 import poster from "../../assets/books-img.jpg";
+
 const BooksCard = ({ book }) => {
-  // let bookImage = book.volumeInfo.imageLinks.smallThumbnail; //thumbnail
   return (
     <div className="card">
       <Link to={`/${book.id}`}>
         <img
           className="book-img"
-          // src={poster}
-          // src={book.volumeInfo.imageLinks.thumbnail}
           src={
-            book.volumeInfo.imageLinks.smallThumbnail === "undefined"
+            book.volumeInfo.imageLinks === undefined
               ? poster
-              : book.volumeInfo.imageLinks.smallThumbnail
+              : book.volumeInfo.imageLinks.thumbnail
           }
           alt={book.volumeInfo.title}
         />
