@@ -25,7 +25,7 @@ The Books App is an application where User can search for books with their Title
 - [x] Each movie poster will be clickable to open a page with the movie details.
 - [x] The user can add a book to the saved books (collection).
 
-- [x] The user can see the errors if something went wrong.
+- [x] The design of the application is inspired by Rituals website .
 
 ## Nice to Have:
 

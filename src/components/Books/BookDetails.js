@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import useFetch from "../hooks/useFetch";
 import IsLoading from "../IsLoading";
 import Error from "../Error";
 import SavedIcon from "../Saved-Books/SavedIcon";
 import "./details.css";
-import poster from "../../assets/books-img.jpg";
+import poster from "../../assets/books.jpg";
 
 const BookDetails = () => {
   const [book, setBook] = useState({});
@@ -14,7 +13,6 @@ const BookDetails = () => {
   let { id } = useParams();
 
   const url = `https://www.googleapis.com/books/v1/volumes/${id}?key=AIzaSyDWPUzECPx7O59PIBOaC72wVv1n8l05J18`;
-  // const { data: book, error, isLoading } = useFetch(url);
 
   useEffect(() => {
     (async () => {
@@ -43,6 +41,7 @@ const BookDetails = () => {
           ) : (
             <div className="box">
               <img
+                className="book-img"
                 src={
                   book.volumeInfo.imageLinks === undefined
                     ? poster
@@ -53,9 +52,10 @@ const BookDetails = () => {
 
               <div className="info">
                 <h1>{book.volumeInfo.title}</h1>
+                <h3>{book.volumeInfo.publishedDate}</h3>
                 <h3>{`Author: ${book.volumeInfo.authors}`}</h3>
-                <h3>{`Published date: ${book.volumeInfo.publishedDate}`}</h3>
                 <h3>{`Number of pages: ${book.volumeInfo.pageCount}`}</h3>
+                <SavedIcon book={book} />
                 <a
                   href={book.volumeInfo.previewLink}
                   rel="noreferrer"
@@ -63,8 +63,6 @@ const BookDetails = () => {
                 >
                   <button>More</button>
                 </a>
-                <SavedIcon book={book} />
-                <h4 className="description">{book.volumeInfo.description}</h4>
               </div>
             </div>
           )}

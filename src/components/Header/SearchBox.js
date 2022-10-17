@@ -4,6 +4,7 @@ import { useSearchContext } from "../../context/SearchContext";
 
 const SearchBox = () => {
   const { search, handleSearch, handleSubmit } = useSearchContext();
+
   return (
     <div>
       <form onSubmit={handleSubmit} className="search-wrapper">

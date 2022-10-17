@@ -10,9 +10,9 @@ const SavedIcon = ({ book }) => {
 
   const checkSavedBook = (id) => {
     const boolean = savedItems.some((book) => book.id === id);
-
     return boolean;
   };
+
   return (
     <div className="icons">
       {checkSavedBook(book.id) ? (

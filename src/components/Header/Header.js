@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import video from "../../assets/downloads.mp4";
 import "../../App.css";
 import "./header.css";
 import SearchBox from "./SearchBox";
-import IsLoading from "../IsLoading";
-const Header = () => {
-  // const [isLoading, setIsLoading] = useState(true);
 
+const Header = () => {
   return (
     <div className="header">
       <video src={video} autoPlay loop />

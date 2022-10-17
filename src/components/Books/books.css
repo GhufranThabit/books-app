@@ -1,11 +1,10 @@
 .books-container {
   width: 70%;
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 3%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
   grid-gap: 20px;
-  box-sizing: border-box;
 }
 
 .card {
@@ -14,8 +13,6 @@
   margin-bottom: 10px;
   box-shadow: 0 5px 5px rgba(91, 88, 84, 0.5);
   transition: 0.5s;
-  text-align: center;
-  position: relative;
 }
 .card .book-img {
   width: 100%;
@@ -37,10 +34,10 @@
   width: 3rem;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
 }
 .icons {
   cursor: pointer;
-  width: 1.5rem;
 }
 .card:hover {
   transform: scale(1.07);

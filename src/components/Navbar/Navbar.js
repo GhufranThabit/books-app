@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../../App.css";
 import "./navbar.css";
-// import searchIcon from "../../assets/icons8-search.svg";
 import booksIcon from "../../assets/books-icon.png";
+
 const Navbar = () => {
   return (
     <div className="navbar">

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./books.css";
 import SavedIcon from "../Saved-Books/SavedIcon";
-import poster from "../../assets/books-img.jpg";
+import poster from "../../assets/books.jpg";
 
 const BooksCard = ({ book }) => {
   return (
